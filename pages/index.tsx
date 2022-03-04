@@ -4,9 +4,11 @@ import GalleryCard from '../components/GalleryCard/GalleryCard'
 import SocialBar from '../components/SocialBar/SocialBar'
 import { useState } from 'react'
 import FilterBar from '../components/FilterBar/FilterBar'
+import { Formik, Form, Field, ErrorMessage, } from 'formik';
+import * as Yup from 'yup';
 
 function chunk (items: {artist: string, description: string, imageUrl: string, imageWidth: number, imageHeight: number, alt:string, title:string}[], size:number) {  
-	const chunks = []
+  const chunks = []
 	items = [...items]
   
 	while (items.length) {
@@ -14,12 +16,13 @@ function chunk (items: {artist: string, description: string, imageUrl: string, i
 		items.splice(0, size)
 	  )
 	}
-  
+
 	return chunks
 }
 
 const Home: NextPage = () => {
-	const artistArray = [
+ 
+  const artistArray = [
 		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
 		{artist: "Paul Kolling", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
 		{artist: "Beeple", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
@@ -82,6 +85,7 @@ const Home: NextPage = () => {
 						})}
 					</div>
 				</div>
+        
 			</div>
 			<SocialBar />
 		</>
