@@ -13,11 +13,10 @@ const About: NextPage = () => {
                     </div>
                     <p className='font-times font-normal italic text-xl mt-2 antialiased leading-6 md:mt-0 px-6 md:px-0 md:mx-0 text-left '>
                         <div>
-                            We are a voluntary, multidisciplinary collective of people united by the urge to help Ukraine.
-                        </div>  
+                            We are a voluntary, multidisciplinary collective of web 3 and art enthuasiasts united by the urge to help Ukraine.                        </div>  
                         <br />
                         <span>
-                            Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use the power of the arts to drive change.
+                            Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use the power of the arts to drive change.                        
                         </span>                
                     </p>
                 </div>
@@ -27,13 +26,18 @@ const About: NextPage = () => {
                     </div>
                     <p className='font-times font-normal italic text-xl mt-2 antialiased leading-6 md:mt-0 px-6 md:px-0 text-left '>
                         <span>
-                            Putain.wtf is a digital gallery and platform showcasing selected artworks by renowned artists that are auctioned for a good cause.                        
+                            Putain.wtf is a digital platform showcasing selected artworks by upcoming artists that are auctioned for a good cause.                        
                         </span>  
                         <br />
                         <br />
                         <span>
                             The artworks offered are NFTs (non fungible tokens) and are donated by the artists. They can be purchased using cryptocurrency (find more information on how that works here).                        
-                        </span> 
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                            Putain.wtf takes care of all technical and financial (legal, tax) aspects that come with auctioning and donating an NFT. By offering a smooth process, we want to encourage artists that have not been active in the NFT space yet, to do so. Our aim is to enable all artists to donate NFTs for a good cause.                        
+                        </span>   
                         <br />
                         <br />
                         <span>
@@ -67,17 +71,17 @@ const About: NextPage = () => {
                     </div>
                     <p className='font-times font-normal italic text-xl mt-2 antialiased leading-6 md:mt-0 px-6 md:px-0 text-left '>
                         <span>
-                            We are a voluntary, multidisciplinary collective of people united by the urge to help Ukraine.
+                            We do not charge commission fees on purchased artworks. Gas fees are paid by the buyer.
                         </span>  
                         <br />
                         <br />
                         <span>
-                            Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use the power of the arts to drive change.
+                            Using the transparency of blockchain technology, we can verify that the donation proceeds are directly transferred to the donation platform endaoment.org from where the funds will be distributed.
                         </span>       
                         <br />
                         <br />
                         <span>
-                            If you wish to be listed on our platform as an artist or as an existing donation project, please reach out.
+                            NFTs are exclusively listed on putain.wtf.
                         </span>         
                     </p>
                 </div> 
