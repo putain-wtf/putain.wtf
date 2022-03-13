@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 	const filteredArtists = activeArtists.length === 0 ? artistArray : artistArray.filter((e, i) => activeArtists.includes(i)) 
 	const filteredGroupedArtists = chunk(filteredArtists, 2)
 	//LAUNCH WEBSITE HERE
-	const ready = false
+	const ready = false 
 	const withArtists = "With Karl-Luis Vossbeck, Tüüg, Valentin Wedde, Tim Schmid and more to follow..."
 	const comingSoon = "Coming soon - wed, 16.03.2022"
 

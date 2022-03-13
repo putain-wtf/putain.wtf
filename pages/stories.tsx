@@ -7,10 +7,10 @@ import Link from "next/link";
 const About: NextPage = () => {
 
     const storiesArray = [
-		{title: "How do I create a digital wallet?",href: "/1", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01", color: "stories-blue"},
-		{title: "How do I create a digital wallet?",href: "/2", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?",number:"02" , color: "stories-green"}, 
-		{title: "How do I create a digital wallet?",href: "/3", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"03", color: "stories-pink"},
-		{title: "How do I create a digital wallet?",href: "/4", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"04", color: "stories-orange"},
+		{title: "How do I create a digital wallet?",href: "/1", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01", color: "text-stories-blue"},
+		{title: "How do I create a digital wallet?",href: "/2", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?",number:"02" , color: "text-stories-green"}, 
+		{title: "How do I create a digital wallet?",href: "/3", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"03", color: "text-stories-pink"},
+		{title: "How do I create a digital wallet?",href: "/4", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"04", color: "text-stories-orange"},
     ]
 
     const title = "Stories."
@@ -37,7 +37,7 @@ const About: NextPage = () => {
                                         key={index}
                                         target="blank_"
                                         >
-                                            <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt}/>
+                                            <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt} />
                                             <div className="bg-white bg-opacity-80 flex absolute mr-4 justify-center items-center w-14 h-14 rounded-full backdrop-blur-3xl top-0 right-0 mt-4 md:hidden">
                                                     <div className={`font-arial-black font-black text-2xl text-${stories.color}`}>
                                                         {stories.number}
@@ -53,7 +53,7 @@ const About: NextPage = () => {
                                                         {stories.description}
                                                     </div>
                                                     <div className="hidden bg-white bg-opacity-80 md:flex absolute mr-3 justify-center items-center w-14 h-14 rounded-full backdrop-blur-3xl top-0 right-0 -translate-y-1/2">
-                                                        <div className={`font-arial-black font-black text-2xl text-${stories.color}`}>
+                                                        <div className={`font-arial-black font-black text-2xl ${stories.color}`}>
                                                             {stories.number}
                                                         </div>
                                                     </div>
