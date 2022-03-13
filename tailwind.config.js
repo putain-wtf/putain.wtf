@@ -14,6 +14,8 @@ module.exports = {
         'insta-black': "url('/insta-black.svg')",
         'discord-black': "url('/discord-black.svg')",
         'github-black': "url('/github-black.svg')",
+        'fundraiser-gallery': "url('/fundraiser-gallery.svg')",
+
       },
 
       fontFamily: {
@@ -21,7 +23,18 @@ module.exports = {
         'arial': ['arial'],
         'times': ['Times-New-Roman'],
       },
+      colors: {
+        'stories-green': "#72AD99",
+        'stories-blue': "#0506FE",
+        'stories-pink': "#A46786",
+        'stories-orange': "#A66128",
+
+
+
+      },
+
     },
   },
   plugins: [],
 }
+

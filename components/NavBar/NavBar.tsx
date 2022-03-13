@@ -50,8 +50,8 @@ export default function NavBar() {
                                         <div className="h-full w-full bg-center bg-contain bg-no-repeat bg-nav-logo">
                                         </div>
                                     </button> 
-                                    <div className="hidden sm:block text-sm">
-                                        fundraiser gallery
+                                    <div className="hidden sm:block w-28 h-8 bg-contain bg-no-repeat bg-center bg-fundraiser-gallery text-base antialiased italic font-times">
+                                        
                                     </div>
                                 </div>
                                 <div className="hidden md:flex justify-between items-center space-x-10">
