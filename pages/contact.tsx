@@ -48,7 +48,7 @@ const Contact: NextPage = () => {
                     </div>
                     
                 </div>
-                <div className=" md:flex absolute top-[26%] right-[10%] md:space-x-20 mt-4">
+                <div className=" md:flex absolute mt-48 right-[10%] md:space-x-20 ">
                     <div className="hidden md:flex md:flex-col md:ml-14 md:justify-start">
                         {linkArray.map((link, index) => {
                             return (     
