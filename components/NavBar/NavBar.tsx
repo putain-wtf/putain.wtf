@@ -45,10 +45,10 @@ export default function NavBar() {
                         <div id="navbar" className={"fixed inset-x-0 z-10 top-0 bg-white " + (isScrolled ? 'bg-opacity-70 backdrop-blur-lg' : '')}>
                             <div className="flex items-center justify-between pl-6 pr-2 md:px-12 md:py-4">
                                 <div className="flex items-center md:justify-between space-x-4">
-                                    <button className="h-8 w-20">
-                                        <div className="h-full w-full bg-center bg-contain bg-no-repeat bg-nav-logo">
-                                        </div>
-                                    </button> 
+                                    <Link href={"/"}>
+                                        <a className=" bg-center bg-contain bg-no-repeat bg-nav-logo h-8 w-20">
+                                        </a>
+                                    </Link> 
                                     <div className="hidden sm:block w-28 h-8 bg-contain bg-no-repeat bg-center bg-fundraiser-gallery text-base antialiased italic font-times">
                                         
                                     </div>
@@ -56,7 +56,6 @@ export default function NavBar() {
                                 <div className="hidden md:flex justify-between items-center space-x-10">
                                     {linkArray.map((link, index) => {
                                         return (
-                                            <button key={index}>
                                                 <Link key={index} href={link.href}>  
                                                     <a 
                                                     className={`font-arial text-sm text-black  ${(router.pathname === link.href) ? `font-bold` : `font-normal`} `}
@@ -64,7 +63,6 @@ export default function NavBar() {
                                                     {link.title}
                                                     </a> 
                                                 </Link>
-                                            </button>
                                         )
                                     })}   
                                 </div>

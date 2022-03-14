@@ -19,28 +19,22 @@ export default function Menu({ setIsOpen, linkArray}: AppProps)  {
                 {linkArray.map((link, index) => {
                     return (
                         <>
-                          <button 
-                            key={index} 
-                            onClick={() => {setIsOpen(false)}}>
-                                <Link key={index} href={link.href}>  
-                                    <a 
-                                    className={`font-arial text-lg text-black ${(router.pathname === link.href) ? `font-bold` : `font-normal`} `}
-                                    key={index}>
-                                    {link.title}
-                                    </a> 
-                                </Link> 
-                            </button>
-                        
-                        
+                            <Link key={index} href={link.href}>  
+                                <a 
+                                className={`font-arial text-lg text-black ${(router.pathname === link.href) ? `font-bold` : `font-normal`} `}
+                                key={index}
+                                onClick={() => {setIsOpen(false)}}>
+                                {link.title}
+                                </a> 
+                            </Link> 
                         </>
                        
                 )})}
             </div>
-            <div className="w-20 h-20">
-                <div className="bg-nav-logo w-full h-full bg-no-repeat bg-center bg-contain">
-
-                </div>
-            </div>
+            <Link href={"/"}>
+                <a className="bg-nav-logo w-20 h-20 bg-no-repeat bg-center bg-contain" onClick={() => {setIsOpen(false)}}>
+                </a>
+            </Link>
         </div> 
     ) 
 }
