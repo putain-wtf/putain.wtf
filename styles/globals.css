@@ -12,3 +12,29 @@
 }
   /* ... */
 }
+
+@font-face {
+        font-family: 'Times New Roman';
+        src: url('/TimesNewRomanPS-ItalicMT.woff2') format('woff2'),
+            url('/TimesNewRomanPS-ItalicMT.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+  }
+
+  @font-face {
+        font-family: 'Times New Roman';
+        src: url('/TimesNRCyrMT-Bold.woff2') format('woff2'),
+            url('/TimesNRCyrMT-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: Bold;
+        font-display: swap;
+  }
+  @font-face {
+        font-family: 'Times New Roman';
+        src: url('/TimesNRCyrMT.woff2') format('woff2'),
+            url('/TimesNRCyrMT.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+  }

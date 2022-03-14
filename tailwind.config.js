@@ -21,7 +21,7 @@ module.exports = {
       fontFamily: {
         'arial-black': ['Arial Black', 'Arial Bold', 'Gadget', 'sans-serif'],
         'arial': ['arial'],
-        'times': ['Times-New-Roman'],
+        'times': ['Times New Roman'],
       },
       colors: {
         'stories-green': "#72AD99",
