@@ -21,10 +21,12 @@ const First: NextPage = () => {
             <NavBar />
             <div className="h-full">
                 <div className="mt-8 mb-20"> 
-                    <div className="w-16 h-16 bg-white mx-auto flex flex-col justify-center items-center rounded-full relative overflow-hidden ">
-                        <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt} layout="intrinsic" />
-                        <div className="w-full h-full bg-white absolute rounded-full bg-opacity-80 backdrop-blur-lg">
-                            <div className={`w-full h-full font-arial-black font-black text-4xl mt-3 rounded-full text-center text-stories-blue`}>
+                    <div className="w-16 h-16 mx-auto relative overflow-hidden rounded-full p-2">
+                        <div className="relative w-full h-full">
+                            <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt} layout="fill" objectFit="contain" objectPosition={"center"}/>
+                        </div>
+                        <div className="bg-white absolute inset-0 bg-opacity-80 backdrop-blur-lg">
+                            <div className={`w-full h-full font-arial-black font-black text-4xl mt-3 text-center text-stories-blue`}>
                                 {stories.number}
                             </div>
                         </div>

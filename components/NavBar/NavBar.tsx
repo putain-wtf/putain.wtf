@@ -46,12 +46,11 @@ export default function NavBar() {
                         <div id="navbar" className={"fixed inset-x-0 z-10 top-0 bg-white " + (isScrolled ? 'bg-opacity-70 backdrop-blur-lg' : '')}>
                             <div className="flex items-center justify-between pl-6 pr-2 md:px-12 md:py-4">
                                 <div className="flex items-center md:justify-between space-x-4">
-                                    <button className="h-8 w-20">
-                                        <div className="h-full w-full bg-center bg-contain bg-no-repeat bg-nav-logo">
-                                        </div>
-                                    </button> 
-                                    <div className="hidden sm:block w-28 h-8 bg-contain bg-no-repeat bg-center bg-fundraiser-gallery text-base antialiased italic font-times">
-                                        
+                                    <Link href={"/"}>
+                                        <a className="h-5 w-20 bg-center bg-contain bg-no-repeat bg-nav-logo">
+                                        </a>
+                                    </Link> 
+                                    <div className="hidden sm:block w-28 h-8 bg-contain bg-no-repeat bg-center bg-fundraiser-gallery text-base antialiased italic font-times">   
                                     </div>
                                 </div>
                                 <div className="hidden md:flex justify-between items-center space-x-10">

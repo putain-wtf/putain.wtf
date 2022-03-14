@@ -7,10 +7,10 @@ import Link from "next/link";
 const About: NextPage = () => {
 
     const storiesArray = [
-		{title: "How do I create a digital wallet?",href: "/1", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01", color: "text-stories-blue"},
-		{title: "How do I create a digital wallet?",href: "/2", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?",number:"02" , color: "text-stories-green"}, 
-		{title: "How do I create a digital wallet?",href: "/3", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"03", color: "text-stories-pink"},
-		{title: "How do I create a digital wallet?",href: "/4", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"04", color: "text-stories-orange"},
+		{title: "How do I create a digital wallet?",href: "/stories/1", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01", color: "text-stories-blue" , bgcolor: "bg-[#e5e8ff]"},
+		{title: "How do I create a digital wallet?",href: "/stories/2", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"02" , color: "text-stories-green" , bgcolor: "bg-[#f6fef9]"}, 
+		{title: "How do I create a digital wallet?",href: "/stories/3", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"03", color: "text-stories-pink" , bgcolor: "bg-[#fff5f8]"},
+		{title: "How do I create a digital wallet?",href: "/stories/4", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"04", color: "text-stories-orange" , bgcolor: "bg-[#fff4eb]"},
     ]
 
     const title = "Stories."
@@ -38,25 +38,32 @@ const About: NextPage = () => {
                                         target="blank_"
                                         >
                                             <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt} />
-                                            <div className="bg-white bg-opacity-80 flex absolute mr-4 justify-center items-center w-14 h-14 rounded-full backdrop-blur-3xl top-0 right-0 mt-4 md:hidden">
-                                                    <div className={`font-arial-black font-black text-2xl text-${stories.color}`}>
+                                            <div className={`${stories.bgcolor} flex absolute mr-4 justify-center items-center w-14 h-14 rounded-full backdrop-blur-3xl top-0 right-0 mt-4 md:hidden`}>
+                                                    <div className={`font-arial-black font-black text-2xl ${stories.color}`}>
                                                         {stories.number}
                                                     </div>
                                                 </div>
-                                            <div className="-mt-4 md:-mt-1.5 relative text-left ">
-                                                <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt}/>   
+                                            <div className="-mt-4 md:-mt-1.5 relative text-left bg-white ">
+                                                <Image src={stories.imageUrl} width={stories.imageWidth} height={stories.imageHeight} alt={stories.alt} objectPosition="bottom"/>   
                                                 <div className={`inset-0 -mt-2 absolute w-full bg-white bg-opacity-80 backdrop-blur-3xl `}>
                                                     <div className="mt-3 md:mt-4 ml-2 w-full top-0 font-arial-black text-sm px-4 mr-12 max-w-[15.625rem] antialiased">
                                                         {stories.title}
                                                     </div>
-                                                    <div className="ml-2 mt-1 top-0 font-times italic text-base md:text-base leading-tight font-normal px-4 antialiased max-w-[18.625rem]">
+                                                    <div className="ml-2 mt-1 top-0 font-times italic text-base md:text-base leading-tight md:leading-tight font-normal px-4 antialiased max-w-[18.625rem]">
                                                         {stories.description}
                                                     </div>
-                                                    <div className="hidden bg-white bg-opacity-80 md:flex absolute mr-3 justify-center items-center w-14 h-14 rounded-full backdrop-blur-3xl top-0 right-0 -translate-y-1/2">
-                                                        <div className={`font-arial-black font-black text-2xl ${stories.color}`}>
-                                                            {stories.number}
+                                                    <div className="hidden md:block absolute top-0 right-0 mr-2 -mt-8">
+                                                        <div className="w-16 h-16 mx-auto relative overflow-hidden rounded-full ">
+                                                            <div className={`relative w-full h-full rounded-full overflow-hidden ${stories.bgcolor}`}>
+                                                            </div>
+                                                            <div className={`absolute inset-0 ${stories.color} `}>
+                                                                <div className={`w-full h-full font-arial-black font-black text-3xl mt-3.5 text-center `}>
+                                                                    {stories.number}
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                   
                                                 </div>
                                         
                                             </div>

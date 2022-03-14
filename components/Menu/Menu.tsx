@@ -30,17 +30,13 @@ export default function Menu({ setIsOpen, linkArray}: AppProps)  {
                                     </a> 
                                 </Link> 
                             </button>
-                        
-                        
-                        </>
-                       
+                        </>    
                 )})}
             </div>
-            <div className="w-20 h-20">
-                <div className="bg-nav-logo w-full h-full bg-no-repeat bg-center bg-contain">
-
-                </div>
-            </div>
+            <Link href={"/"}>
+                <a className="bg-nav-logo bg-no-repeat bg-center bg-contain w-20 h-20" onClick={() => {setIsOpen(false)}}>
+                </a>
+            </Link>
         </div> 
     ) 
 }

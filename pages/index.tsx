@@ -22,18 +22,18 @@ function chunk (items: {artist: string, description: string, imageUrl: string, i
 const Home: NextPage = () => {
  
   const artistArray = [
-		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
-		{artist: "Paul Kolling", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
-		{artist: "Beeple", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
-		{artist: "Sarah Friend", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Gabriela Sabela", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Jonas Lund", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
-		{artist: "Paul Kolling", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
-		{artist: "Beeple", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
-		{artist: "Sarah Friend", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Gabriela Sabela", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Jonas Lund", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Barry Paf", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
 	]
 
 	const linkArray = [
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 	const filteredArtists = activeArtists.length === 0 ? artistArray : artistArray.filter((e, i) => activeArtists.includes(i)) 
 	const filteredGroupedArtists = chunk(filteredArtists, 2)
 	//LAUNCH WEBSITE HERE
-	const ready = false 
+	const ready = true 
 	const withArtists = "With Karl-Luis Vossbeck, Tüüg, Valentin Wedde, Tim Schmid and more to follow..."
 	const comingSoon = "Coming soon - wed, 16.03.2022"
 
