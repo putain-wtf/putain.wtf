@@ -6,7 +6,6 @@ import Menu from "../Menu/Menu"
 export default function NavBar() {
     const linkArray = [
         {title: "gallery", href: "/"},
-        {title: "stories", href:"/stories"},
         {title: "about", href:"/about"},
         {title: "contact", href:"/contact"},
     ]
