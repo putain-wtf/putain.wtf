@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 	const [activeArtists, setActiveArtists] = useState<number[]>([])
 	const filteredArtists = activeArtists.length === 0 ? artistArray : artistArray.filter((e, i) => activeArtists.includes(i)) 
 	const filteredGroupedArtists = chunk(filteredArtists, 2)
-	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg, Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter, Julian Barfknecht, Albrecht-Wilke and more to follow..."
+	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg, Monique.Cool, Oska Wald, Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter, Julian Barfknecht, Albrecht-Wilke and more to follow..."
 	const comingSoon = "Coming soon - Mon, 21.03.2022"
 
 
