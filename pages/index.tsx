@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 	const [activeArtists, setActiveArtists] = useState<number[]>([])
 	const filteredArtists = activeArtists.length === 0 ? artistArray : artistArray.filter((e, i) => activeArtists.includes(i)) 
 	const filteredGroupedArtists = chunk(filteredArtists, 2)
-	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg, Cora Wöllenstein, Monique.Cool, Oska Wald, Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter, Julian Barfknecht, Albrecht-Wilke and more to follow..."
+	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg,\n Cora Wöllenstein, Monique.Cool, Oska Wald,\n Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter,\n Julian Barfknecht, Albrecht-Wilke and more to follow..."
 	const comingSoon = "Coming soon - Mon, 21.03.2022"
 
 
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
 						<div className='font-arial-black font-black uppercase max-w-[9.375rem] md:max-w-none mx-auto'>
 							{comingSoon}
 						</div>
-						<div className='mt-3 font-times text-lg italic max-w-[15rem] md:max-w-[25rem]'>
+						<div className='mt-3 font-times text-lg italic max-w-[15rem] md:max-w-[25rem] md:whitespace-pre-wrap'>
 							{withArtists}
 						</div>
 						<div className='hidden md:flex items-center justify-center mt-3'>
