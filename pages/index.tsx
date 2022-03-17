@@ -27,13 +27,13 @@ const Home: NextPage = () => {
 		{artist: "Paul Kolling", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
 		{artist: "Beeple", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
 		{artist: "Sarah Friend", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Gabriela Sabela", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Sabela Garcia", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
 		{artist: "Jonas Lund", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
 		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
 		{artist: "Paul Kolling", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-2.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Paul Kolling",title:"a nice nft"},
 		{artist: "Beeple", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-3.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Beeple", title:"a nice nft"},
 		{artist: "Sarah Friend", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
-		{artist: "Gabriela Sabela", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
+		{artist: "Sabela Garcia", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
 		{artist: "Jonas Lund", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-4.jpg", imageWidth: 3000, imageHeight: 2000, alt: "Sarah Friend", title:"a nice nft"},
 	]
 
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 	const [activeArtists, setActiveArtists] = useState<number[]>([])
 	const filteredArtists = activeArtists.length === 0 ? artistArray : artistArray.filter((e, i) => activeArtists.includes(i)) 
 	const filteredGroupedArtists = chunk(filteredArtists, 2)
-	const withArtists = "With Karl-Luis Vossbeck, Tüüg, Valentin Wedde, Tim Schmid, Lisa Strautmann  and more to follow..."
+	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg, Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter, Julian Barfknecht, Albrecht-Wilke and more to follow..."
 	const comingSoon = "Coming soon - Mon, 21.03.2022"
 
 
