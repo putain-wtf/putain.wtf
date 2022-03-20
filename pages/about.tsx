@@ -1,11 +1,26 @@
 import NavBar from "../components/NavBar/NavBar";
 import { NextPage } from "next";
 import SocialBar from "../components/SocialBar/SocialBar";
+import Head from "next/head";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-const About: NextPage = () => {
+type AboutProps = {
+    supabaseClient: SupabaseClient
+}
+
+const About: NextPage<AboutProps> = ({supabaseClient}) => {
     return (
         <>
-            <NavBar />
+            <Head>
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+                <link rel="manifest" href="/site.webmanifest"/>
+                <meta name="msapplication-config" content="/browserconfig.xml" />
+                <meta name="msapplication-TileColor" content="#ffffff"/>
+                <meta name="theme-color" content="#ffffff"/>
+            </Head>
+            <NavBar supabaseClient={supabaseClient} />
             <div className=" mx-auto lg:px-30 md:px-20 max-w-lg md:max-w-screen-lg mb-28 ">
                 <div className='md:text-right md:flex mt-20 md:space-x-12 '>
                     <div className='font-arial-black font-black text-base md:text-lg uppercase md:flex-none px-6 md:w-56 '>

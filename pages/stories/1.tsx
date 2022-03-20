@@ -3,8 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../../components/NavBar/NavBar";
 import SocialBar from "../../components/SocialBar/SocialBar";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-const First: NextPage = () => {
+type FirstProps = {
+    supabaseClient: SupabaseClient
+}
+
+const First: NextPage<FirstProps> = ({supabaseClient}) => {
 
     const stories = {title: "How do I create a digital wallet?", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01"}
     const author = "Benjamin Preiss"
@@ -18,7 +23,7 @@ const First: NextPage = () => {
 
     return (
         <>
-            <NavBar />
+            <NavBar supabaseClient={supabaseClient} />
             <div className="h-full">
                 <div className="mt-8 mb-20"> 
                     <div className="w-16 h-16 mx-auto relative overflow-hidden rounded-full p-2">

@@ -21,16 +21,14 @@ module.exports = {
       fontFamily: {
         'arial-black': ['Arial Black', 'Arial Bold', 'Gadget', 'sans-serif'],
         'arial': ['arial'],
-        'times': ['Times-New-Roman'],
+        'times': ['Times New Roman'],
       },
       colors: {
         'stories-green': "#72AD99",
         'stories-blue': "#0506FE",
         'stories-pink': "#A46786",
         'stories-orange': "#A66128",
-
-
-
+        'error-red': '#FF0000'
       },
 
     },

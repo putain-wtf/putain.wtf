@@ -3,8 +3,13 @@ import { NextPage } from "next";
 import SocialBar from "../components/SocialBar/SocialBar";
 import Image from "next/image";
 import Link from "next/link";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-const About: NextPage = () => {
+type StoriesProps = {
+    supabaseClient: SupabaseClient
+}
+
+const Stories: NextPage<StoriesProps> = ({supabaseClient}) => {
 
     const storiesArray = [
 		{title: "How do I create a digital wallet?",href: "/stories/1", description: "Supported and advised by a network of respected specialists in the art and NFT scene, we aim to use ...", imageUrl: "/example-image-1.jpg", imageWidth: 3000, imageHeight: 2000, alt: "How do I create a digital wallet?", number:"01", color: "text-stories-blue" , bgcolor: "bg-[#e5e8ff]"},
@@ -17,7 +22,7 @@ const About: NextPage = () => {
     const introduction = "Here are the latest news/stories regarding anything in the art as well as digital currency sector."
     return (
         <>
-            <NavBar />
+            <NavBar supabaseClient={supabaseClient} />
             <div className="h-full">
                 <div className="mb-20  ">
                     <div className=' max-w-[18.625rem] md:max-w-none text-left md:text-center mt-20 mx-auto font-arial-black font-black text-base md:text-lg uppercase px-2 md:px-6  '>
@@ -79,5 +84,5 @@ const About: NextPage = () => {
         </>
     )  
 }
-export default About;
+export default Stories;
 
