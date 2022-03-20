@@ -2,8 +2,10 @@ import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Menu from "../Menu/Menu"
+import dynamic from 'next/dynamic'
+import AccountButton from "../AccountButton/AccountButton";
 
-export default function NavBar() {
+function NavBar({supabaseClient}) {
     const linkArray = [
         {title: "gallery", href: "/"},
         {title: "about", href:"/about"},
@@ -13,7 +15,6 @@ export default function NavBar() {
     const router = useRouter()
     const [isScrolled, setIsScrolled] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
-
 
     useEffect(() => {
         const options = {
@@ -35,16 +36,17 @@ export default function NavBar() {
             if(target) observer.unobserve(target)
         }
     }, [])
+
     return (
         <>
             {isOpen === true ? <div className=" absolute inset-0 bg-white z-10"></div> : null}
             {(isOpen === true) ? 
-                <Menu setIsOpen={setIsOpen} linkArray={linkArray} /> : (
+                <Menu setIsOpen={setIsOpen} linkArray={linkArray} supabaseClient={supabaseClient} /> : (
                     <>
-                        <div id="navbar-area" className="bg-transparent w-full h-[4.25rem]"></div>
-                        <div id="navbar" className={"fixed inset-x-0 z-10 top-0 bg-white " + (isScrolled ? 'bg-opacity-70 backdrop-blur-lg' : '')}>
-                            <div className="flex items-center justify-between pl-6 pr-2 md:px-12 md:py-4">
-                                <div className="flex items-center md:justify-between space-x-4">
+                        <div id="navbar-area" className="bg-transparent w-full md:h-[4.25rem] h-[3rem]"></div>
+                        <div id="navbar" className={"fixed md:h-[4.25rem] h-[3rem] inset-x-0 z-10 top-0 bg-white " + (isScrolled ? 'bg-opacity-70 backdrop-blur-lg' : '')}>
+                            <div className="flex h-full relative items-center justify-center">
+                                <div className="absolute left-6 md:left-12 inset-y-0 flex items-center md:justify-between space-x-4">
                                     <Link href={"/"}>
                                         <a className=" bg-center bg-contain bg-no-repeat bg-nav-logo h-8 w-20">
                                         </a>
@@ -56,17 +58,20 @@ export default function NavBar() {
                                 <div className="hidden md:flex justify-between items-center space-x-10">
                                     {linkArray.map((link, index) => {
                                         return (
-                                                <Link key={index} href={link.href}>  
-                                                    <a 
-                                                    className={`font-arial text-sm text-black  ${(router.pathname === link.href) ? `font-bold` : `font-normal`} `}
-                                                    key={index}>
-                                                    {link.title}
-                                                    </a> 
-                                                </Link>
+                                            <Link key={index} href={link.href}>  
+                                                <a 
+                                                className={`font-arial text-sm text-black  ${(router.pathname === link.href) ? `font-bold` : `font-normal`} `}
+                                                key={index}>
+                                                {link.title}
+                                                </a> 
+                                            </Link>
                                         )
                                     })}   
                                 </div>
-                                <div className="md:hidden">
+                                <div className="absolute right-12 inset-y-0 hidden md:flex items-center">
+                                    <AccountButton supabaseClient={supabaseClient} />
+                                </div>
+                                <div className="md:hidden absolute right-2 inset-y-0">
                                     <button 
                                     onClick={() => {setIsOpen(true)}}
                                     className="h-12 w-12 p-3">
@@ -82,3 +87,7 @@ export default function NavBar() {
         </>
     )
 }
+
+export default dynamic(() => Promise.resolve(NavBar), {
+    ssr: false
+})

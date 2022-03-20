@@ -6,7 +6,7 @@ import Link from "next/link";
 import SocialBar from "../components/SocialBar/SocialBar";
 import Head from "next/head";
 
-const Contact: NextPage = () => {
+const Contact: NextPage = ({supabaseClient}) => {
     const inputErrorClasses = (isError: boolean) => isError ? "" : ""
     const inputClasses = " bg-white w-full py-1.5 md:py-1.5 px-2 mt-2 text-left focus:outline focus:outline-4 outline-transparent focus:outline-black/20 border-black font-arial placeholder:uppercase px-4 font-normal text-light-gray antialiased border-[1px] "
 
@@ -28,7 +28,7 @@ const Contact: NextPage = () => {
                 <meta name="msapplication-TileColor" content="#ffffff"/>
                 <meta name="theme-color" content="#ffffff"/>
             </Head>
-            <NavBar />
+            <NavBar supabaseClient={supabaseClient} />
             <div className=" mx-auto md:px-40 max-w-lg md:max-w-screen-lg h-[80vh] flex flex-col items-center ">
                 <div className='text-center md:flex md:space-x-16 mt-52 '>
                     <div className='font-arial-black font-black text-base md:text-lg uppercase'>

@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import SocialBar from "../components/SocialBar/SocialBar";
 import Head from "next/head";
 
-const About: NextPage = () => {
+const About: NextPage = ({supabaseClient}) => {
     return (
         <>
             <Head>
@@ -15,7 +15,7 @@ const About: NextPage = () => {
                 <meta name="msapplication-TileColor" content="#ffffff"/>
                 <meta name="theme-color" content="#ffffff"/>
             </Head>
-            <NavBar />
+            <NavBar supabaseClient={supabaseClient} />
             <div className=" mx-auto lg:px-30 md:px-20 max-w-lg md:max-w-screen-lg mb-28 ">
                 <div className='md:text-right md:flex mt-20 md:space-x-12 '>
                     <div className='font-arial-black font-black text-base md:text-lg uppercase md:flex-none px-6 md:w-56 '>

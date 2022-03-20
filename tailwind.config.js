@@ -28,9 +28,7 @@ module.exports = {
         'stories-blue': "#0506FE",
         'stories-pink': "#A46786",
         'stories-orange': "#A66128",
-
-
-
+        'error-red': '#FF0000'
       },
 
     },

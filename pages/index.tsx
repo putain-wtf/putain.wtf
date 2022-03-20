@@ -6,6 +6,8 @@ import { useState } from 'react'
 import FilterBar from '../components/FilterBar/FilterBar'
 import Link from 'next/link'
 import Head from 'next/head'
+import { Auth, Typography, Button } from "@supabase/ui";
+import { createClient } from "@supabase/supabase-js";
 
 function chunk (items: {artist: string, description: string, imageUrl: string, imageWidth: number, imageHeight: number, alt:string, title:string}[], size:number) {  
   const chunks = []
@@ -20,7 +22,7 @@ function chunk (items: {artist: string, description: string, imageUrl: string, i
 	return chunks
 }
 
-const Home: NextPage = () => {
+const Home: NextPage = ({supabaseClient}) => {
  
   const artistArray = [
 		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},
@@ -50,7 +52,6 @@ const Home: NextPage = () => {
 	const withArtists = "With Lisa Strautmann, Karl-Luis Vossbeck, Tüüg,\n Cora Wöllenstein, Monique.Cool, Oska Wald,\n Valentin Wedde, Tigor, Leo Ludwigs, Antonia Reiter,\n Julian Barfknecht, Albrecht-Wilke and more to follow..."
 	const comingSoon = "Coming soon - Mon, 21.03.2022"
 
-
 	return (
 		<>
 			<Head>
@@ -62,7 +63,7 @@ const Home: NextPage = () => {
 				<meta name="msapplication-TileColor" content="#ffffff"/>
 				<meta name="theme-color" content="#ffffff"/>
 			</Head>
-			<NavBar/>
+			<NavBar supabaseClient={supabaseClient} />
 				<div className='h-[80vh] text-center flex flex-col items-center justify-center '>
 						<div className='font-arial-black font-black uppercase max-w-[9.375rem] md:max-w-none mx-auto'>
 							{comingSoon}
