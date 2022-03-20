@@ -2,8 +2,14 @@ import { Auth } from "@supabase/ui";
 import Image from "next/image";
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { NextPage } from "next";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-export default function Login({supabaseClient}) {
+type LoginProps = {
+    supabaseClient: SupabaseClient
+}
+
+const Login: NextPage<LoginProps> = ({supabaseClient}) => {
     const router = useRouter()
     
     useEffect(() => {
@@ -36,3 +42,5 @@ export default function Login({supabaseClient}) {
         </>
     )
 }
+
+export default Login

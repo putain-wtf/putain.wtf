@@ -1,4 +1,6 @@
-export async function getUserProfile({userId, supabaseClient}) {
+import { SupabaseClient } from "@supabase/supabase-js"
+
+export async function getUserProfile({userId, supabaseClient}: {userId: string | undefined, supabaseClient: SupabaseClient}) {
     const { data, error } = await supabaseClient
         .from('profiles')
         .select("*")
@@ -15,7 +17,7 @@ export async function getUserProfile({userId, supabaseClient}) {
     return data
 }
 
-export async function updateUserProfile({userId, username, biddingmode, supabaseClient}) {
+export async function updateUserProfile({userId, username, biddingmode, supabaseClient}: {userId: string | undefined, supabaseClient: SupabaseClient, username: string | undefined, biddingmode: "true" | "false"}) {
     const anonymous_bidding = biddingmode === "false" ? false : true
     const { data, error } = await supabaseClient
         .from('profiles')

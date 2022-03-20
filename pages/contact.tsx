@@ -5,8 +5,13 @@ import * as Yup from 'yup';
 import Link from "next/link";
 import SocialBar from "../components/SocialBar/SocialBar";
 import Head from "next/head";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-const Contact: NextPage = ({supabaseClient}) => {
+type ContactProps = {
+    supabaseClient: SupabaseClient
+}
+
+const Contact: NextPage<ContactProps> = ({supabaseClient}) => {
     const inputErrorClasses = (isError: boolean) => isError ? "" : ""
     const inputClasses = " bg-white w-full py-1.5 md:py-1.5 px-2 mt-2 text-left focus:outline focus:outline-4 outline-transparent focus:outline-black/20 border-black font-arial placeholder:uppercase px-4 font-normal text-light-gray antialiased border-[1px] "
 

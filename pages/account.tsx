@@ -1,4 +1,5 @@
 import { Auth } from "@supabase/ui";
+import { SupabaseClient } from "@supabase/supabase-js";
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useQuery, useQueryClient } from "react-query";
@@ -7,8 +8,13 @@ import { getUserProfile } from "../util/supabaseFetching";
 import AccountButton from "../components/AccountButton/AccountButton";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { NextPage } from "next";
 
-export default function Account({supabaseClient}) {
+type AccountProps = {
+    supabaseClient: SupabaseClient
+}
+
+const Account: NextPage<AccountProps> = ({supabaseClient}) => {
     const queryClient = useQueryClient()
     const { user } = Auth.useUser();
     const [isEditing, setIsEditing] = useState(false)
@@ -115,3 +121,5 @@ export default function Account({supabaseClient}) {
         </>
     )
 }
+
+export default Account

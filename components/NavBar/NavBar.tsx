@@ -4,8 +4,9 @@ import Link from "next/link"
 import Menu from "../Menu/Menu"
 import dynamic from 'next/dynamic'
 import AccountButton from "../AccountButton/AccountButton";
+import { SupabaseClient } from "@supabase/supabase-js"
 
-function NavBar({supabaseClient}) {
+function NavBar({supabaseClient}: {supabaseClient: SupabaseClient}) {
     const linkArray = [
         {title: "gallery", href: "/"},
         {title: "about", href:"/about"},

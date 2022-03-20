@@ -1,3 +1,4 @@
+import { SupabaseClient } from "@supabase/supabase-js"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import AccountButton from "../AccountButton/AccountButton"
@@ -5,6 +6,7 @@ import AccountButton from "../AccountButton/AccountButton"
 type AppProps = {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
     linkArray: Array<{title: string, href: string}>
+    supabaseClient: SupabaseClient
 }
 
 export default function Menu({ setIsOpen, linkArray, supabaseClient}: AppProps)  {

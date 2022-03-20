@@ -7,7 +7,11 @@ import FilterBar from '../components/FilterBar/FilterBar'
 import Link from 'next/link'
 import Head from 'next/head'
 import { Auth, Typography, Button } from "@supabase/ui";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+
+type IndexProps = {
+	supabaseClient: SupabaseClient
+}
 
 function chunk (items: {artist: string, description: string, imageUrl: string, imageWidth: number, imageHeight: number, alt:string, title:string}[], size:number) {  
   const chunks = []
@@ -22,7 +26,7 @@ function chunk (items: {artist: string, description: string, imageUrl: string, i
 	return chunks
 }
 
-const Home: NextPage = ({supabaseClient}) => {
+const Home: NextPage<IndexProps> = ({supabaseClient}) => {
  
   const artistArray = [
 		{artist: "Simon Denny", description: "Ein längerer Projekttitel, 2022", imageUrl: "/example-image-1.jpg", imageWidth: 3200, imageHeight: 2400, alt: "Simon Denny", title:"a nice nft"},

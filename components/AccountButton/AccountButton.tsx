@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { Auth } from "@supabase/ui";
 import dynamic from "next/dynamic";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-function AccountButton({supabaseClient}) {
+function AccountButton({supabaseClient}: {supabaseClient: SupabaseClient}) {
     const router = useRouter()
     const { user } = Auth.useUser();
     return user ? router.pathname === "/account" ? (

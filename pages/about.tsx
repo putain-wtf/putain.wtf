@@ -2,8 +2,13 @@ import NavBar from "../components/NavBar/NavBar";
 import { NextPage } from "next";
 import SocialBar from "../components/SocialBar/SocialBar";
 import Head from "next/head";
+import { SupabaseClient } from "@supabase/supabase-js";
 
-const About: NextPage = ({supabaseClient}) => {
+type AboutProps = {
+    supabaseClient: SupabaseClient
+}
+
+const About: NextPage<AboutProps> = ({supabaseClient}) => {
     return (
         <>
             <Head>
