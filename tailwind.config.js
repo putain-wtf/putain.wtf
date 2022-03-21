@@ -10,7 +10,7 @@ module.exports = {
         'nav-burger': "url('/nav-burger.svg')",
         'nav-logo': "url('/putain-logo.svg')",
         'menu-cross': "url('/menu-cross.svg')",
-        'twitter-black': "url('/twitter-black.svg')",
+        'foundation-black': "url('/foundation-black.png')",
         'insta-black': "url('/insta-black.svg')",
         'discord-black': "url('/discord-black.svg')",
         'github-black': "url('/github-black.svg')",

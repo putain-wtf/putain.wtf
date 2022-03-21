@@ -16,9 +16,9 @@ const Contact: NextPage<ContactProps> = ({supabaseClient}) => {
     const inputClasses = " bg-white w-full py-1.5 md:py-1.5 px-2 mt-2 text-left focus:outline focus:outline-4 outline-transparent focus:outline-black/20 border-black font-arial placeholder:uppercase px-4 font-normal text-light-gray antialiased border-[1px] "
 
     const linkArray = [
-        {href:"https://twitter.com/PutainWtf", iconClass:"bg-twitter-black"},
-        {href:"", iconClass: "bg-insta-black"},
-        {href:"https://discord.com/channels/@me/putain.wtf#8590", iconClass: "bg-discord-black"},
+        {href:"https://foundation.app/@putain.wtf", iconClass:"bg-foundation-black"},
+        {href:"https://www.instagram.com/put.ain.wtf/", iconClass: "bg-insta-black"},
+        {href:"https://discord.gg/eFAbSsPwQd", iconClass: "bg-discord-black"},
         {href:"https://github.com/putain-wtf", iconClass: "bg-github-black"},
     ]
     

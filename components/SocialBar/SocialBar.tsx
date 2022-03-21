@@ -4,9 +4,9 @@ import Link from "next/link"
 
 export default function SocialBar() {
     const linkArray = [
-        {href:"https://twitter.com/PutainWtf", iconClass:"bg-twitter-black"},
-        {href:"", iconClass: "bg-insta-black"},
-        {href:"https://discord.com/channels/@me/putain.wtf#8590", iconClass: "bg-discord-black"},
+        {href:"https://foundation.app/@putain.wtf", iconClass:"bg-foundation-black"},
+        {href:"https://www.instagram.com/put.ain.wtf/", iconClass: "bg-insta-black"},
+        {href:"https://discord.gg/eFAbSsPwQd", iconClass: "bg-discord-black"},
         {href:"https://github.com/putain-wtf", iconClass: "bg-github-black"},
     ]
     const [isScrolled, setIsScrolled] = useState(false)
