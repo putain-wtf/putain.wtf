@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
 
 type GalleryCardProps = {
@@ -12,7 +11,7 @@ type GalleryCardProps = {
     title: string,
     isNft: boolean,
     price: string,
-    startDate: string
+    startDate: string,
 }
 
 export default function GalleryCard({imageUrl, marketUrl, alt, width, height, artist, title, isNft, price, startDate}: GalleryCardProps) {

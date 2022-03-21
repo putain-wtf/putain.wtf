@@ -36,7 +36,7 @@ const Login: NextPage<LoginProps> = ({supabaseClient}) => {
             </div>
             <div className="min-h-[100vh] w-full flex items-center justify-center p-6">
                 <div className="max-w-md w-full bg-white p-10 rounded-lg bg-opacity-80 filter backdrop-blur-3xl">
-                    <Auth providers={['facebook', 'github']} supabaseClient={supabaseClient}/>
+                    <Auth providers={["facebook", "google"]} supabaseClient={supabaseClient}/>
                 </div>
             </div>
         </>
