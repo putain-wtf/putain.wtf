@@ -13,7 +13,7 @@ type IndexProps = {
 	supabaseClient: SupabaseClient
 }
 
-function chunk (items: {artist: string, description: string, imageUrl: string, imageWidth: number, imageHeight: number, alt:string, title:string}[], size:number) {  
+function chunk (items: {artist: string, description: string, imageUrl: string, imageWidth: number, imageHeight: number, alt:string, title:string, price:string, startDate:string, isNft: boolean}[], size:number) {  
   const chunks = []
 	items = [...items]
   
