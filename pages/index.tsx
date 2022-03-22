@@ -32,7 +32,7 @@ const Home: NextPage<IndexProps> = ({supabaseClient}) => {
 		{artist: "JULIAN B.", description: "Motivational Quote, 2021\n17 x 26 x 9 cm\nglazed stoneware", imageUrl: "/61995D7E-64BA-4B2A-AB75-DAA07D478644.jpeg", imageWidth: 3024, imageHeight: 4032, alt: "Motivational Quote, 2021\n17 x 26 x 9 cm\nglazed stoneware", title:"Motivational Quote, 2021", isNft: false, price: "100.00 €", startDate: "auction starts 25.03.2022"},
 		{artist: "ALBRECHT | WILKE", description: "Abstraktes Wurstbild Nr.12, 2021 \nfrom “Eine moderne Wurstserie”\m31,9 x 24 cm\nacrylic- and watercolour paint on paper, backside signed", imageUrl: "/Wurst8.png", imageWidth: 2499, imageHeight: 3284, alt: "Abstraktes Wurstbild Nr.12, 2021 \nfrom “Eine moderne Wurstserie”\m31,9 x 24 cm\nacrylic- and watercolour paint on paper, backside signed", title:"Abstraktes Wurstbild Nr.12, 2021", isNft: false, price: "500.00 €", startDate: "auction starts 25.03.2022"},
 		{artist: "ANTONIA REITER", description: "", imageUrl: "/2022.jpeg", imageWidth: 2892, imageHeight: 2254, alt: "Antonia Reiter - 2022 - Print on Barite", title:"Saint Mary, 2022", isNft: false, price: "40.00 € ", startDate: "auction starts 25.03.2022"},
-
+		{artist: "TÜÜG - HANNE FRANKEN & RIEKE SANDER", description: "", imageUrl: "/ChillOut.png", imageWidth: 1289, imageHeight: 1506, alt: "TÜÜG - HANNE FRANKEN & RIEKE SANDER - CHILL OUT (relax don't do it, when you want to get do it!), 2022", title:"CHILL OUT (relax don't do it, when you want to get do it!), 2022", isNft: false, price: "100.00 € ", startDate: "auction starts 25.03.2022"}
 	]
 
 	const [activeArtists, setActiveArtists] = useState<number[]>([])
