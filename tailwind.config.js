@@ -8,7 +8,8 @@ module.exports = {
 
       backgroundImage: {
         'nav-burger': "url('/nav-burger.svg')",
-        'nav-logo': "url('/putain-logo.svg')",
+        'nav-logo': "url('/putain-logo-black.svg')",
+        'footer-logo': "url('/putain-logo-white.svg')",
         'menu-cross': "url('/menu-cross.svg')",
         'foundation-black': "url('/foundation-black.png')",
         'insta-black': "url('/insta-black.svg')",

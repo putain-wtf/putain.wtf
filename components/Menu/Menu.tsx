@@ -36,7 +36,7 @@ export default function Menu({ setIsOpen, linkArray, supabaseClient}: AppProps) 
                 <AccountButton supabaseClient={supabaseClient}/>
             </div>
             <Link href={"/"}>
-                <a className="bg-nav-logo w-20 h-20 bg-no-repeat bg-center bg-contain" onClick={() => {setIsOpen(false)}}>
+                <a className="bg-nav-logo w-20 h-20 bg-no-repeat bg-center bg-contain " onClick={() => {setIsOpen(false)}}>
                 </a>
             </Link>
         </div> 

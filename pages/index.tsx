@@ -6,6 +6,7 @@ import { useState } from 'react'
 import FilterBar from '../components/FilterBar/FilterBar'
 import Head from 'next/head'
 import { SupabaseClient } from "@supabase/supabase-js";
+import Footer from '../components/Footer/Footer'
 
 type IndexProps = {
 	supabaseClient: SupabaseClient
