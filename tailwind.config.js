@@ -13,7 +13,7 @@ module.exports = {
         'menu-cross': "url('/menu-cross.svg')",
         'foundation-black': "url('/foundation-black.png')",
         'insta-black': "url('/insta-black.svg')",
-        'discord-black': "url('/discord-black.svg')",
+        'endaoment-black': "url('/endaoment-black.svg')",
         'github-black': "url('/github-black.svg')",
         'fundraiser-gallery': "url('/fundraiser-gallery.svg')",
 

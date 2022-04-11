@@ -1,5 +1,5 @@
 type FilterBarProps = {
-    entryArray: string[]
+    entryArray: string[] | undefined
     activeEntries: number[]
     setActiveEntries: React.Dispatch<React.SetStateAction<number[]>>
 }
@@ -12,7 +12,7 @@ function onClick(entry: number, activeEntries: number[], setActiveEntries: React
 export default function FilterBar({entryArray, activeEntries, setActiveEntries} : FilterBarProps) {
     return (
         <div className='flex overflow-scroll no-scrollbar mt-2 text-base md:overflow-hidden md:flex-wrap'>
-            {entryArray.map((artist, key) =>{
+            {entryArray?.map((artist, key) =>{
                 return (
                     <button 
                         key={key}

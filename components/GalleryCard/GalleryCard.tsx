@@ -10,12 +10,15 @@ type GalleryCardProps = {
     artist: string,
     title: string,
     isNft: boolean,
-    price: string,
+    startPrice: string,
+    currency: string,
     startDate: string,
 }
 
-export default function GalleryCard({imageUrl, marketUrl, alt, width, height, artist, title, isNft, price, startDate}: GalleryCardProps) {
+export default function GalleryCard({imageUrl, marketUrl, alt, width, height, artist, title, isNft, startPrice, currency, startDate}: GalleryCardProps) {
     const [isOpen, setIsOpen] = useState(false)
+    const startD = new Date(startDate)
+    const startDString = startDate ? "Auction starts " + startD.toLocaleString('en-EN', {timeZoneName: "short", month: "2-digit", day: "2-digit", year: "numeric", hour: "2-digit"}) : "Auctions starting soon"
     return (
         <div className="relative block w-full group">
             <div className="relative block w-full">
@@ -29,8 +32,8 @@ export default function GalleryCard({imageUrl, marketUrl, alt, width, height, ar
             <div className="p-3">
                 <div className="text-left font-arial antialiased font-black uppercase">{artist}</div>
                 <div className="text-left font-times antialiased italic font-normal">{title}</div>
-                <div className="text-left font-arial font-bold antialiased text-sm mt-1">{price}</div>
-                <div className="text-left font-arial font-normal antialiased text-xs mt-3 uppercase">{startDate}</div>
+                <div className="text-left font-arial font-bold antialiased text-sm mt-1">{startPrice + " " + currency}</div>
+                <div className="text-left font-arial font-normal antialiased text-xs mt-3 uppercase">{startDString}</div>
             </div>
         </div>
     )
