@@ -30,7 +30,10 @@ export default function GalleryCard({imageUrl, marketUrl, alt, width, height, ar
                 }
             </div>
             <div className="p-3">
-                <div className="text-left font-arial antialiased font-black uppercase">{artist}</div>
+                <div className="flex items-center justify-start space-x-4">
+                    <div className="text-left font-arial antialiased font-black uppercase">{artist}</div>
+                    {isNft ? <div className="text-center font-arial antialiased font-bold uppercase border-[1px] border-black text-xs px-1 leading-tight">NFT</div> : null}
+                </div>
                 <div className="text-left font-times antialiased italic font-normal">{title}</div>
                 <div className="text-left font-arial font-bold antialiased text-sm mt-1">{startPrice + " " + currency}</div>
                 <div className="text-left font-arial font-normal antialiased text-xs mt-3 uppercase">{startDString}</div>
